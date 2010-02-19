@@ -12,6 +12,7 @@
 
 <% unless @items.count.zero? -%>
   <%= build_list(@resource[:class], @fields, @items) %>
+  <br/><h4>Total <%= @resource[:human_name].pluralize %>: <%= @resource[:class].count %></h4><br/>
   <%= pagination %>
 <% else %>
   <div id="flash" class="notice">
